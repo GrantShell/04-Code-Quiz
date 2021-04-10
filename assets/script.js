@@ -1,58 +1,56 @@
 //make up questions
-var questions = {
-    {
-        title: "Question 1 here";
-        choices: ["1", "2", "3", "4"];
-        answer: "1";
+var questions = [
+  {
+    question: "Question 1",
+    answers: [
+      { text: "1", correct: true },
+      { text: "2", correct: false },
+      { text: "3", correct: false },
+      { text: "4", correct: false },
+    ],
+  },
+  {
+    question: "Question 2",
+    answers: [
+      { text: "1", correct: true },
+      { text: "2", correct: false },
+      { text: "3", correct: false },
+      { text: "4", correct: false },
+    ],
+  },
+  {
+    question: "Question 3",
+    answers: [
+      { text: "1", correct: true },
+      { text: "2", correct: false },
+      { text: "3", correct: false },
+      { text: "4", correct: false },
+    ],
+  },
+];
+
+var startButton = document.getElementById("start-btn");
+var questionContainerEl = document.getElementById("questions-container");
+var quizTimer = document.getElementById("timer");
+var timeLeft = 100;
+var timerInterval;
+
+startButton.addEventListener("click", startGame);
+
+function startGame() {
+  console.log("started");
+  startButton.classList.add("hide");
+  questionContainerEl.classList.remove("hide");
+  timerInterval = setInterval(function () {
+    timeLeft--;
+    quizTimer.textContent = "Time Left!" + timeLeft;
+
+    if (timeLeft === 0) {
+      clearInterval(timerInterval);
     }
-    {
-        title: "Question 2 here";
-        choices: ["1", "2", "3", "4"];
-        answer: "1";
-    }
-    {
-        title: "Question 3 here";
-        choices: ["1", "2", "3", "4"];
-        answer: "1";
-    }
-    {
-        title: "Question 4 here";
-        choices: ["1", "2", "3", "4"];
-        answer: "1";
-    }
-    {
-        title: "Question 5 here";
-        choices: ["1", "2", "3", "4"];
-        answer: "1";
-    }
-};
-
-function
-
-
-var score
-var timer
-
-function setTime() {
-    // Sets interval in variable
-    var timer = setInterval(function() {
-      secondsLeft--;
-      timeEl.textContent = secondsLeft;
-  
-      if(secondsLeft === 0) {
-        // Stops execution of action at set interval
-        clearInterval(timer);
-        gameOver()
-      }
-  
-    }, 1000);
-  }
-
-function gameOver() {
-    clearInterval(timer)
-
-    <h2>Game Over</h2>
+  }, 1000);
 }
 
-//for questions
-function 
+function nextQuestion() {
+  showQuestions(questions);
+}

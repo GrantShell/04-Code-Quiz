@@ -4,28 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="assets/style.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet" />
     <title>Code Quiz</title>
   </head>
   <body>
     <div class="container">
-      <div id="Questions-container">
+      <div id="questions-container" class="hide">
         <div id="questions">Questions</div>
-          <div id="answer-btn" class="btn-grid">
-            <button class="btn">A</button>
-            <button class="btn">B</button>
-            <button class="btn">C</button>
-            <button class="btn">D</button>
-          </div>
+        <div id="answer-btns" class="btn-grid">
+          <button class="btn">A</button>
+          <button class="btn">B</button>
+          <button class="btn">C</button>
+          <button class="btn">D</button>
         </div>
       </div>
       <div class="controls">
         <button id="start-btn" class="start-btn">Start</button>
-        <button id="next-btn" class="next-btn">Next</button>
+        <button id="next-btn" class="next-btn hide">Next</button>
       </div>
     </div>
   </body>
 </html>
 <script src="assets/script.js"></script>
-Try to answer the following code-related questions within the time limit. Keep
-in mind that incorrect answers will penalize your score/time!
